@@ -9,28 +9,40 @@
         <h1 class="heading">Iconic - Parts Sourcing</h1>
         <h3 class="sub-heading">Fill in any info you have</h3>
         <div id="main-content">
+            <label for="make">Make:</label>
+            <select name="make" class="selection-input" id="make">
+                <option value="blankMake">Make</option>
+                <option value="bmw">bmw</option>
+                <option value="ducati">ducati</option>
+                <option value="honda">honda</option>
+                <option value="kawasaki">kawasaki</option>
+            </select>
             <label for="year">Year:</label>
-            <select name="year" class="selection-input">
+            <select name="year" class="selection-input" id="year">
+                <option value="blankYear">Year</option>
                 <option value="1991">1991</option>
                 <option value="1992">1992</option>
                 <option value="1993">1993</option>
                 <option value="1994">1994</option>
             </select>
-            <label for="make">Make:</label>
-            <select name="make" class="selection-input">
-                <option value="bmw">bmw</option>
-                <option value="ducati">ducati</option>
-                <option value="honda">honda</option>
-                <option value="kawasaki">kawasaki</option>
-            </select>
             <label for="model">Model:</label>
-            <select name="model" class="selection-input">
-                <option value="bmw">bmw</option>
-                <option value="ducati">ducati</option>
-                <option value="honda">honda</option>
-                <option value="kawasaki">kawasaki</option>
+            <select name="model" class="selection-input" id="model">
+                <option value="blankModel">Model</option>
+                <option value="cbr">cbr</option>
+                <option value="999r">999r</option>
+                <option value="grom">grom</option>
+                <option value="ninja">ninja</option>
             </select>
-            <select disabled></select>
+        </div>
+        <div>
+            <form>
+                <br><br>
+                <label for="part-number">Part Number:</label>
+                
+                <input id="part-number" name="part-number" type="text" placeholder="Ex: 12-345678">
+            </form>
+            <h1></h1>
+            <p></p>
         </div>
       </div>
     </main>
