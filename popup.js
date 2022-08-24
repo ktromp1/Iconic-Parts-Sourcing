@@ -17,7 +17,8 @@ document.addEventListener("DOMContentLoaded", async () => {
   makeStatus.addEventListener("change", (e) => {
     console.log("test")
     yearStatus.disabled = false
-    modelStatus.disabled = false
+    // modelStatus.disabled = false
+
     // if make is set to blank, everything is disabled again
     if (makeStatus.value == "blankMake") disableYearModel()
 
