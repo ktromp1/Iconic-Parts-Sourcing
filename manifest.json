@@ -1,14 +1,14 @@
 {
-    "name":"Iconic - Parts",
+    "manifest_version": 3,
+    "name":"Iconic - Sourcing",
     "description": "Parts Department quick searches on multiple websites",
     "version": "1.0",
-    "manifest_version": 3,
     "permissions": [],
     "host_permissions": [],
     "background": {
       "service_worker": "background/background.js"
     },
-    "action": {
+    "browser_action": {
       "default_title": "Parts Sourcing",
       "default_icon": "assets/iconic_logo_32.png",
       "default_popup": "popup/popup.html"
