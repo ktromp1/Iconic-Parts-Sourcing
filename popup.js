@@ -97,35 +97,42 @@ document.addEventListener("DOMContentLoaded", async () => {
     }
   })
   modelStatus.addEventListener("change", () => {
-    updateLinkAddress()
+    updateCMSLinkAddress()
   })
   yearStatus.addEventListener("change", () => {
-    updateLinkAddress()
+    updateCMSLinkAddress()
   })
   makeStatus.addEventListener("change", () => {
-    updateLinkAddress()
+    updateCMSLinkAddress()
   })
   const cmsURL = document.createElement("a")
   cmsURL.rel = "noopener noreferrer nofollow"
   cmsURL.target = "_blank"
   cmsURL.innerText = "Dealer CMSNL Catalog"
   cmsLink.appendChild(cmsURL)
-  updateLinkAddress()
+  updateCMSLinkAddress()
 
-  if (partNumber.value) {
-    const part = partNumber.value
-    const form = document.querySelector("form")
-    const partsHeading = document.querySelector("h1")
-  }
+  const form = document.querySelector("form")
+  const partsUnlimited = document.querySelector("#parts-unlimited")
+  partsUnlimited.rel = "noopener noreferrer nofollow"
+  partsUnlimited.target = "_blank"
+
+  partNumber.addEventListener("input", () => {
+    updatePULinkAddress()
+  })
+
   function disableYearModel() {
     yearStatus.disabled = true
     modelStatus.disabled = true
   }
-  function updateLinkAddress() {
+  function updateCMSLinkAddress() {
     cmsURL.href = `https://dealers.cmsnl.com/en-gb/models-browse?category=Motorcycle${
       yearStatus.value != "blankYear" ? "&year=" + yearStatus.value : ""
     }${makeStatus.value != "blankMake" ? "&make=" + makeStatus.value : ""}${
       makeStatus.value == "blankModel" ? "&model=" + modelStatus.value : ""
     }`
+  }
+  function updatePULinkAddress() {
+    partsUnlimited.href = `https://dealer.parts-unlimited.com/search;q=${partNumber.value};r=eJyrVkrLzClJLSpWsoqOrQUAJusFKA%3D%3D`
   }
 })
